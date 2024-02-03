@@ -22,6 +22,7 @@
 //#include "rainbow_beacon_anim.h"
 #include "rainbow_pinwheels_anim.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 //#include "raindrops_anim.h"
 //#include "jellybean_raindrops_anim.h"
 //#include "hue_breathing_anim.h"
@@ -46,6 +47,8 @@
 //#include "breathing_smile_anim.h"
 #include "cycle_left_right_partial_anim.h"
 =======
+=======
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 #include "flower_blooming_anim.h"
 #include "raindrops_anim.h"
 #include "jellybean_raindrops_anim.h"
@@ -67,5 +70,9 @@
 #include "starlight_anim.h"
 #include "starlight_dual_sat_anim.h"
 #include "starlight_dual_hue_anim.h"
+<<<<<<< HEAD
+#include "riverflow_anim.h"
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
+=======
 #include "riverflow_anim.h"
 >>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a

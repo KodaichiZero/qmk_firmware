@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define SPLIT_HAND_PIN D5
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define ENCODERS_PAD_A { B3, F6 }
 #define ENCODERS_PAD_B { B2, F7 }
 #define ENCODERS_PAD_A_RIGHT { B3, F6 }
@@ -61,6 +62,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGBLIGHT_EFFECT_RGB_TEST
 #    define RGBLIGHT_EFFECT_ALTERNATING
 #    define RGBLIGHT_EFFECT_TWINKLE
+=======
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 =======
 >>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 #    define RGBLIGHT_DEFAULT_VAL 120
@@ -110,6 +113,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#        define ENABLE_RGB_MATRIX_SOLID_SPLASH
 //#        define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 <<<<<<< HEAD
+<<<<<<< HEAD
 //     ==========================
 //     CUSTOM ANIMATIONS GO HERE!
 //     ==========================
@@ -128,12 +132,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
 #        define RGB_MATRIX_LED_COUNT 68
 >>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
+=======
+#        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
+#        define RGB_MATRIX_LED_COUNT 68
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 #        define RGB_MATRIX_SPLIT { 34, 34 }
 #        define RGB_DISABLE_WHEN_USB_SUSPENDED
 #        define RGB_MATRIX_KEYPRESSES
 #        define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 //#    endif
 <<<<<<< HEAD
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 =======
 >>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
