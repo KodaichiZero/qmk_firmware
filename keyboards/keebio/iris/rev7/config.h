@@ -19,8 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define SPLIT_HAND_PIN D5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #define ENCODERS_PAD_A { B3, F6 }
 #define ENCODERS_PAD_B { B2, F7 }
 #define ENCODERS_PAD_A_RIGHT { B3, F6 }
