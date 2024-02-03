@@ -118,13 +118,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #        define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT_THIRD
 #        define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT_HALF
 //     ==========================
-#        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 144
 #        define RGB_MATRIX_DEFAULT_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #        define RGB_MATRIX_LED_COUNT RGBLED_NUM
-
 #        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
-#        define RGB_MATRIX_LED_COUNT 68
-
 #        define RGB_MATRIX_SPLIT { 34, 34 }
 #        define RGB_DISABLE_WHEN_USB_SUSPENDED
 #        define RGB_MATRIX_KEYPRESSES
