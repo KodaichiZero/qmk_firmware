@@ -60,10 +60,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGBLIGHT_EFFECT_RGB_TEST
 #    define RGBLIGHT_EFFECT_ALTERNATING
 #    define RGBLIGHT_EFFECT_TWINKLE
-=======
->>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
-=======
->>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 #    define RGBLIGHT_DEFAULT_VAL 120
 #    define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_MODE_RAINBOW_SWIRL + 2)
 // RGB Matrix
@@ -110,8 +106,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#        define ENABLE_RGB_MATRIX_MULTISPLASH
 //#        define ENABLE_RGB_MATRIX_SOLID_SPLASH
 //#        define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 //     ==========================
 //     CUSTOM ANIMATIONS GO HERE!
 //     ==========================
@@ -126,23 +121,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 144
 #        define RGB_MATRIX_DEFAULT_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #        define RGB_MATRIX_LED_COUNT RGBLED_NUM
-=======
+
 #        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
 #        define RGB_MATRIX_LED_COUNT 68
->>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
-=======
-#        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
-#        define RGB_MATRIX_LED_COUNT 68
->>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
+
 #        define RGB_MATRIX_SPLIT { 34, 34 }
 #        define RGB_DISABLE_WHEN_USB_SUSPENDED
 #        define RGB_MATRIX_KEYPRESSES
 #        define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 //#    endif
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #endif
-=======
->>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
-=======
->>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
