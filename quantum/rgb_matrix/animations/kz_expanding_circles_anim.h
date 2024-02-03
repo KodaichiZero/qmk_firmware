@@ -1,3 +1,5 @@
+#include "transactions.h"
+#include <stdio.h>
 
 #if defined(RGB_MATRIX_FRAMEBUFFER_EFFECTS) && defined(ENABLE_RGB_MATRIX_KZ_EXPANDING_CIRCLES)
 RGB_MATRIX_EFFECT(KZ_EXPANDING_CIRCLES)
@@ -17,12 +19,12 @@ typedef struct _master_to_slave_t {
     uint8_t m2s_data;
 } master_to_slave_t;
 
-void user_sync_x_slave_handler(uint8_t in_buflen, const void* in_data) {
+void user_sync_a_slave_handler(uint8_t in_buflen, const void* in_data) {
     const master_to_slave_t *m2s = (const master_to_slave_t*)in_data;
     cx = (int16_t)m2s->m2s_data;
 }
 
-void user_sync_y_slave_handler(uint8_t in_buflen, const void* in_data) {
+void user_sync_b_slave_handler(uint8_t in_buflen, const void* in_data) {
     const master_to_slave_t *m2s = (const master_to_slave_t*)in_data;
     cy = (int16_t)m2s->m2s_data;
 }
@@ -33,8 +35,8 @@ void user_sync_c_slave_handler(uint8_t in_buflen, const void* in_data) {
 }
 
 void keyboard_post_init_user(void) {
-    transaction_register_rpc(USER_SYNC_X, user_sync_x_slave_handler);
-    transaction_register_rpc(USER_SYNC_Y, user_sync_y_slave_handler);
+    transaction_register_rpc(USER_SYNC_A, user_sync_a_slave_handler);
+    transaction_register_rpc(USER_SYNC_B, user_sync_b_slave_handler);
     transaction_register_rpc(USER_SYNC_C, user_sync_c_slave_handler);
 }
 
@@ -62,11 +64,11 @@ bool KZ_EXPANDING_CIRCLES(effect_params_t* params) {
         //cc = cc + qhue + random8_max(qsub8(255, qhue));
         cc = rgb_matrix_config.hsv.h + random8_max(qsub8(128, qhue));
 
-        master_to_slave_t m2s_x = (master_to_slave_t){(uint8_t)cx};
-        master_to_slave_t m2s_y = (master_to_slave_t){(uint8_t)cy};
+        master_to_slave_t m2s_a = (master_to_slave_t){(uint8_t)cx};
+        master_to_slave_t m2s_b = (master_to_slave_t){(uint8_t)cy};
         master_to_slave_t m2s_c = (master_to_slave_t){cc};
-        transaction_rpc_send(USER_SYNC_X, sizeof(m2s_x), &m2s_x);
-        transaction_rpc_send(USER_SYNC_Y, sizeof(m2s_y), &m2s_y);
+        transaction_rpc_send(USER_SYNC_A, sizeof(m2s_a), &m2s_a);
+        transaction_rpc_send(USER_SYNC_B, sizeof(m2s_b), &m2s_b);
         transaction_rpc_send(USER_SYNC_C, sizeof(m2s_c), &m2s_c);
     }
     prevTime = time;

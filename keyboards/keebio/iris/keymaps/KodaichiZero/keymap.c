@@ -7,6 +7,8 @@
 #define _ADJUST 3
 #define _FIGHT 4
 
+#define SPLIT_TRANSACTION_IDS_USER USER_SYNC_A, USER_SYNC_B, USER_SYNC_C
+
 enum custom_keycodes {
   QWERTY = SAFE_RANGE,
   LOWER,
