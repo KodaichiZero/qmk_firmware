@@ -17,18 +17,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* key matrix size */
-// Rows are doubled-up
-#define MATRIX_ROWS 10
-#define MATRIX_COLS 6
-
-// wiring of each half
-#define MATRIX_ROW_PINS { B1, F0, F5, B4, D7 }
-#define MATRIX_COL_PINS { F1, F4, B5, C7, D4, D6 }
-#define MATRIX_ROW_PINS_RIGHT { B1, F0, F5, B4, B5 }
-#define MATRIX_COL_PINS_RIGHT { D4, D6, D7, C7, F1, F4 }
 #define SPLIT_HAND_PIN D5
 
+<<<<<<< HEAD
 #define ENCODERS_PAD_A { B3, F6 }
 #define ENCODERS_PAD_B { B2, F7 }
 #define ENCODERS_PAD_A_RIGHT { B3, F6 }
@@ -70,6 +61,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGBLIGHT_EFFECT_RGB_TEST
 #    define RGBLIGHT_EFFECT_ALTERNATING
 #    define RGBLIGHT_EFFECT_TWINKLE
+=======
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 #    define RGBLIGHT_DEFAULT_VAL 120
 #    define RGBLIGHT_DEFAULT_MODE (RGBLIGHT_MODE_RAINBOW_SWIRL + 2)
 // RGB Matrix
@@ -116,6 +109,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#        define ENABLE_RGB_MATRIX_MULTISPLASH
 //#        define ENABLE_RGB_MATRIX_SOLID_SPLASH
 //#        define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+<<<<<<< HEAD
 //     ==========================
 //     CUSTOM ANIMATIONS GO HERE!
 //     ==========================
@@ -130,9 +124,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 144
 #        define RGB_MATRIX_DEFAULT_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #        define RGB_MATRIX_LED_COUNT RGBLED_NUM
+=======
+#        define RGB_MATRIX_MAXIMUM_BRIGHTNESS 120
+#        define RGB_MATRIX_LED_COUNT 68
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
 #        define RGB_MATRIX_SPLIT { 34, 34 }
 #        define RGB_DISABLE_WHEN_USB_SUSPENDED
 #        define RGB_MATRIX_KEYPRESSES
 #        define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 //#    endif
+<<<<<<< HEAD
 #endif
+=======
+>>>>>>> fa2fb9bbe03706219b5aff3d312ea57ace1e4b3a
