@@ -11,7 +11,7 @@ bool GRADIENT_UP_DOWN(effect_params_t* params) {
         RGB_MATRIX_TEST_LED_FLAGS();
         // The y range will be 0..64, map this to 0..4
         // Relies on hue being 8-bit and wrapping
-        hsv.h   = rgb_matrix_config.hsv.h + scale * (g_led_config.point[i].y >> 4);
+		hsv.h = rgb_matrix_config.hsv.h + ((scale * g_led_config.point[i].y) >> 4);
         RGB rgb = rgb_matrix_hsv_to_rgb(hsv);
         rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
     }

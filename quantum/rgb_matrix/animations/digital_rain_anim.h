@@ -44,11 +44,16 @@ bool DIGITAL_RAIN(effect_params_t* params) {
             // TODO: multiple leds are supported mapped to the same row/column
             if (led_count > 0) {
                 if (g_rgb_frame_buffer[row][col] > pure_green_intensity) {
-                    const uint8_t boost = (uint8_t)((uint16_t)max_brightness_boost * (g_rgb_frame_buffer[row][col] - pure_green_intensity) / (max_intensity - pure_green_intensity));
-                    rgb_matrix_set_color(led[0], boost, max_intensity, boost);
+                    RGB rgb = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv);
+                    int boost = (int)((uint16_t)max_brightness_boost * (g_rgb_frame_buffer[row][col] - pure_green_intensity) / (max_intensity - pure_green_intensity));
+                    rgb_matrix_set_color(led[0], rgb.r + (uint8_t)(boost * (255 - rgb.r) / max_intensity), rgb.g + (uint8_t)(boost * (255 - rgb.g) / max_intensity), rgb.b + (uint8_t)(boost * (255 - rgb.b) / max_intensity));
+                    //rgb_matrix_set_color(led[0], (uint8_t)((rgb.r * boost) / 255), (uint8_t)((rgb.g * boost) / 255), (uint8_t)((rgb.b * boost) / 255));
+                    //rgb_matrix_set_color(led[0], boost, max_intensity, boost);
                 } else {
-                    const uint8_t green = (uint8_t)((uint16_t)max_intensity * g_rgb_frame_buffer[row][col] / pure_green_intensity);
-                    rgb_matrix_set_color(led[0], 0, green, 0);
+                    int green = (int)((uint16_t)max_intensity * g_rgb_frame_buffer[row][col] / pure_green_intensity);
+                    RGB rgb = rgb_matrix_hsv_to_rgb(rgb_matrix_config.hsv);
+                    rgb_matrix_set_color(led[0], (uint8_t)((rgb.r * green) / 255), (uint8_t)((rgb.g * green) / 255), (uint8_t)((rgb.b * green) / 255));
+                    //rgb_matrix_set_color(led[0], 0, green, 0);
                 }
             }
         }
